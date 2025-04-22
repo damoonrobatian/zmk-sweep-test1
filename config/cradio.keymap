@@ -167,6 +167,12 @@
             #binding-cells = <0>;
             bindings = <&kp DOT &kp COLON>;   // . → :
         };
+        
+        td_slash: tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH &kp BSLH>; // / → \
+        };
     };
 
 
@@ -193,15 +199,19 @@
         };
     };
 
+
+
+
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
                // Left pinky to index (top row)
-               &td_q                &td_w                &td_e                &td_r               &td_t                         &td_y            &td_u               &td_i              &td_o                &td_p
-               &ht LSHFT &td_a      &ht LALT &td_s       &ht LCTRL &td_d      &ht LGUI &td_f      &td_g                         &td_h            &ht RGUI &td_j      &ht RALT td_k      &ht RCTRL &td_l      &ht RSHFT &td_quote     
-               &td_z                &td_x                &td_c                &td_v               &td_b                         &td_n            &td_m               &td_comma           &td_dot             &kp SLASH
+               &td_q                &td_w                &td_e                &td_r               &td_t                         &td_y            &td_u               &td_i               &td_o                &td_p
+               &ht LSHFT &td_a      &ht LALT &td_s       &ht LCTRL &td_d      &ht LGUI &td_f      &td_g                         &td_h            &ht RGUI &td_j      &ht RALT &td_k      &ht RCTRL &td_l      &ht RSHFT &td_quote     
+               &td_z                &td_x                &td_c                &td_v               &td_b                         &td_n            &td_m               &td_comma           &td_dot              &td_slash
                                                                               &ht TAB SPACE       &kp ENTER                     &kp SPACE        &kp ENTER
         >;
             >;
