@@ -191,8 +191,8 @@
 
         combo_word_del {
             timeout-ms = <80>;
-            key-positions = <17 19>; // L then J
-            bindings = <&mt LCTRL BSPC>;
+            key-positions = <17 19>; // L + J
+            bindings = <&mod_morph LCTRL &kp BSPC>; 
         };
     };
 
@@ -211,7 +211,6 @@
                &td_z                &td_x                &td_c                &td_v               &td_b                         &td_n            &td_m               &td_comma           &td_dot              &td_slash
                                                                               &ht TAB SPACE       &kp ENTER                     &kp SPACE        &kp ENTER
         >;
-            >;
         };
     };
 };
