@@ -11,7 +11,7 @@
         td_b_l: tap_dance {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            bindings = <&kp B &mt LSHFT B>;
+            bindings = <&kp B &kp LS(B)>;
         };
     };
 
